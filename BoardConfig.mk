@@ -14,6 +14,10 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := MSM8937
+TARGET_NO_BOOTLOADER := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_serial_dm,0x78B0000 androidboot.usbconfigfs=true loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
@@ -27,6 +31,7 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/binaries/dtbo.img
 TARGET_KERNEL_ARCH := arm64
 
 # Partitions
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184
 BOARD_DTBOIMG_PARTITION_SIZE := 33554432
