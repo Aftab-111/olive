@@ -1,5 +1,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+    
 # File systems table
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
